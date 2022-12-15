@@ -4,7 +4,10 @@ let cacheData = "pwaDemo";
 this.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(cacheData).then((cache) => {
-      cache.addAll(["/static/js/bundle.js", "/index.html", "/users", "/", "/*"]);
+      // cache.addAll(["/static/js/bundle.js", "/index.html", "/users", "/", "/*"]);
+      ["/static/js/bundle.js", "/index.html", "/users", "/", "/*"].map((el) => {
+        cache.add(el);
+      });
     })
   );
 });

@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar bg="primary" variant="dark">
           <Container>
             <Navbar.Brand href="#home">Navbar</Navbar.Brand>
@@ -44,7 +44,7 @@ function App() {
           <Route exact path="/users" element={<Users />} />
           <Route exact path="/about" element={<About />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

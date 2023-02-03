@@ -1,5 +1,5 @@
 import { Alert, Container, Nav, Navbar } from "react-bootstrap";
-import { BrowserRouter, Link, HashRouter } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import { Routes, Route } from "react-router";
 import "./App.css";
 import Home from "./components/Home";
@@ -21,10 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <HashRouter>
+      <BrowserRouter>
         <Navbar bg="primary" variant="dark">
           <Container>
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link>
                 <Link to="/">Home</Link>
@@ -44,7 +43,7 @@ function App() {
           <Route exact path="/users" element={<Users />} />
           <Route exact path="/about" element={<About />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }

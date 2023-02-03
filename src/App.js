@@ -26,22 +26,22 @@ function App() {
           <Container>
             <Nav className="me-auto">
               <Nav.Link>
-                <Link to="/">Home</Link>
+                <Link to="/PWA_Demo/">Home</Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/users">Users</Link>
+                <Link to="/PWA_Demo/users">Users</Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/about">About</Link>
+                <Link to="/PWA_Demo/about">About</Link>
               </Nav.Link>
             </Nav>
           </Container>
         </Navbar>
         {mode === "offLine" && <Alert variant={"warning"}>Warning! You are offline.</Alert>}
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/users" element={<Users />} />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/PWA_Demo/" element={<Home />} />
+          <Route exact path="/PWA_Demo/users" element={<Users />} />
+          <Route exact path="/PWA_Demo/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>
